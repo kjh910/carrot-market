@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  frontend:
+      build: 
+        context: ./frontend
+      container_name: carrot_market_frontend
+      volumes:
+        - ./frontend/app:/app
+      ports:
+        - "3000:3000"
+      networks:
+        - carrot
+
+networks:
+  carrot:
+    name: carrot
+    driver: bridge
