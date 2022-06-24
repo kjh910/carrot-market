@@ -8,7 +8,8 @@ services:
       volumes:
         - ./frontend/app:/app
       ports:
-        - "3000:3000"
+        - "4000:4000"
+        - "5555:5555"
       networks:
         - carrot
 
