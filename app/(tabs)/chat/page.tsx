@@ -31,10 +31,18 @@ async function getInitialChatRooms() {
           }
         }
       }
-    }
+    },
+    orderBy: {
+      created_at: "desc", 
+    },
   });
-  console.log(chatRooms[3].messages)
-  return chatRooms;
+  const sortedChatRooms = chatRooms.sort((a, b) => {
+    const dateA = a.messages[0]?.created_at || new Date(0); // 메시지가 없는 경우 가장 오래된 날짜로
+    const dateB = b.messages[0]?.created_at || new Date(0);
+    return dateB.getTime() - dateA.getTime();
+  });
+
+  return sortedChatRooms;
 }
 
 export default async function Chat() {
