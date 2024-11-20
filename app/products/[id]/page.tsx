@@ -135,7 +135,7 @@ export default async function ProductDetail({
       </div>
       <div className="fixed w-full bottom-0  p-5 pb-10 bg-neutral-800 flex justify-between items-center max-w-screen-sm">
         <span className="font-semibold text-xl">
-          {formatToWon(product.price)}원
+          ¥ {formatToWon(product.price)}
         </span>
         {isOwner ? (
           <form action={revalidate}>
@@ -146,7 +146,7 @@ export default async function ProductDetail({
         ) : null}
         <form action={createChatRoom}>
           <button className="bg-orange-500 px-5 py-2.5 rounded-md text-white font-semibold">
-            채팅하기
+            Chat
           </button>
         </form>
       </div>

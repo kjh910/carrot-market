@@ -9,8 +9,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const SUPABASE_PUBLIC_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmaHZzbHpsbnp6eXRmd21jd3dzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTE1MzIwMDYsImV4cCI6MjAyNzEwODAwNn0.6_CBGkLSb8hl06prsZkzsUrf98pjwcwgXgqeFLNiXL0";
-const SUPABASE_URL = "https://bfhvslzlnzzytfwmcwws.supabase.co";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJodHRldHRkbnRsZnJvdXZuaWVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzIwMDQwNTIsImV4cCI6MjA0NzU4MDA1Mn0.b7BZphoa6g5b9XJaOmw96q-H5ydSj9WNDvYm7GrfAAA";
+const SUPABASE_URL = "https://bhttettdntlfrouvnies.supabase.co";
 
 interface ChatMessageListProps {
   initialMessages: InitialChatMessages;
@@ -89,7 +89,7 @@ export default function ChatMessagesList({
             message.userId === userId ? "justify-end" : ""
           }`}
         >
-          {message.userId === userId ? null : (
+          {/* {message.userId === userId ? null : (
             <Image
               src={message.user.avatar!}
               alt={message.user.username}
@@ -97,7 +97,7 @@ export default function ChatMessagesList({
               height={50}
               className="size-8 rounded-full"
             />
-          )}
+          )} */}
           <div
             className={`flex flex-col gap-1 ${
               message.userId === userId ? "items-end" : ""

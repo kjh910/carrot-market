@@ -83,7 +83,7 @@ export default function AddProduct() {
             <>
               <PhotoIcon className="w-20" />
               <div className="text-neutral-400 text-sm">
-                사진을 추가해주세요.
+                写真を追加してください。
                 {errors.photo?.message}
               </div>
             </>
@@ -99,7 +99,7 @@ export default function AddProduct() {
         />
         <Input
           required
-          placeholder="제목"
+          placeholder="タイトル"
           type="text"
           {...register("title")}
           errors={[errors.title?.message ?? ""]}
@@ -107,18 +107,18 @@ export default function AddProduct() {
         <Input
           type="number"
           required
-          placeholder="가격"
+          placeholder="価格"
           {...register("price")}
           errors={[errors.price?.message ?? ""]}
         />
         <Input
           type="text"
           required
-          placeholder="자세한 설명"
+          placeholder="詳細"
           {...register("description")}
           errors={[errors.description?.message ?? ""]}
         />
-        <Button text="작성 완료" />
+        <Button text="作成" />
       </form>
     </div>
   );

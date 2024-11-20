@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroicons/react": "^2.1.1",
     "@hookform/resolvers": "^3.9.1",
+    "@nextui-org/avatar": "^2.0.33",
     "@prisma/client": "^5.11.0",
     "@supabase/supabase-js": "^2.40.0",
     "@tailwindcss/forms": "^0.5.7",
